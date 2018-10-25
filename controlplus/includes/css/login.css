@@ -1,0 +1,162 @@
+@charset "utf-8";
+/* CSS Control Plus - Login */
+
+body {
+	background: #fff top repeat-x url(../imgs/login-bg.jpg);
+	margin: 30px auto 0px auto;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #999;
+}
+
+#all {
+	width: 317px;
+	margin: auto;
+}
+
+#all #topo {
+	background: none;
+	float: left;
+}
+
+#all #topo .logo {
+	margin: 0px 30px 0px 33px;
+	float: left;
+}
+
+#all #topo .icone {
+	margin-top: 33px;
+	float: left;
+}
+
+#all #form {
+	background: url(../imgs/login-form-bg-center.png) center top repeat-y;
+	padding: 0px 0px 0px 38px;
+	float: left;
+}
+
+#all #form form#login {
+	float: left;
+}
+
+#all #form .top {
+	float: left;
+}
+
+#all #form .bottom {
+	float: left;
+}
+
+#all #form form label {
+	margin-bottom: 15px;
+	width: 220px;
+	float: left;
+}
+
+#all #form form input {
+	border: 1px solid #D7D7D7;
+	font-size: 16px;
+	font-weight: bold;
+	padding: 3px 0px 2px 7px;
+	height: 25px;
+	width: 233px;
+	float: left;
+}
+
+#all #form form input.senha {
+	margin-top: 5px;
+	padding: 1px 0px 4px 7px;
+	float: left;
+}
+
+#all #form form#login input.botao1 {
+	background: url(../imgs/login-botao-entrar.png) repeat left top; height: 36px; margin: 10px 0px 0px 38px; width: 81px; border: 0px; outline: 0px; padding: 0px; cursor: pointer; float: left;
+}
+
+#all #form form#login input.botao1:hover {
+	background-position: 0px 35px;
+}
+
+#all #form form a {
+	font-size: 12px;
+	color: #333;
+	text-decoration: underline;
+	margin-top: 20px;
+	float: left;
+}
+
+#all #form form a:hover {
+	color: #F96400;
+}
+
+#all #form form#lembrarSenha {
+	float: left;
+}
+
+#all #form form#lembrarSenha .line {
+	margin: 20px 0px 10px 0px;
+	float: left;
+}
+
+#all #form form#lembrarSenha input.botao {
+	background: url(../imgs/login-botao-enviar.png) repeat left top;
+	height: 36px;
+	margin: 10px 0px 0px 118px;
+	width: 126px;
+	border: 0px;
+	outline: 0px;
+	text-indent: -9999px;
+	padding: 0px;
+	cursor: pointer;
+	float: left;
+}
+
+#all #form form#lembrarSenha input.botao:hover {
+	background-position: 0px 35px;
+}
+
+#all #rodape {
+	background: url(../imgs/login-rodape-bg.png) center no-repeat;
+	margin: 0px 0px 0px 2px;
+	padding: 15px 0px 15px 30px;
+	width: 285px;
+	height: 44px;
+	float: left;
+}
+
+#all #rodape a {
+	color: #999;
+	text-decoration: underline;
+}
+
+#all #rodape a:hover {
+	color: #F96400;
+}
+
+#all #rodape a.link-mediaplus {
+	background: url(../imgs/login-rodape-mediaplus.jpg) repeat left top;
+	height: 34px;
+	margin: 0px;
+	width: 36px;
+	text-indent: -9999px;
+	outline: 0px;
+	float: right;
+}
+
+#all #rodape a.link-mediaplus:hover {
+	background-position: 0px 34px;
+}
+
+#all #rodape span.txt-preto {
+	color: #333;
+	font-weight: bold;
+}
+
+#all #rodape .info {
+	float: left;
+}
+
+#all #rodape .mediaplus {
+	margin: 7px 0px 0px 20px;
+	float: left;
+}

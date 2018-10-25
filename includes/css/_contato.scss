@@ -1,0 +1,100 @@
+@import "settings";
+@import "../../core/scss/mixins";
+
+#_contato-page {
+
+  .left{
+    @include mp-calc(width, '100% - 590px');
+    float: left;
+    margin: 60px 20px 0 0;
+
+    form{
+      @include mp-width();
+      .cmp {
+        @include mp-width($m: 0 0 20px 0);
+
+        input,
+        textarea {
+          @include mp-width(100%, 50px);
+          border: 2px solid #EEEEEE;
+          @include mp-br(2px, 2px, 2px, 2px);
+          padding: 0 20px;
+          font-size: 14px;
+          color: #444444;
+          box-shadow: none !important;
+          @include mp-sombra();
+          @include mp-placeholder() {
+            opacity: 1;
+            font-size: 14px;
+            color: #444444;
+            @include mp-sombra();
+          }
+
+          &:focus {
+            border-color: $color-default;
+          }
+        }
+
+        textarea {
+          padding: 20px;
+          height: 125px;
+        }
+
+      }
+
+      button {
+        @include mp-width(100%, 50px);
+        @include mp-br(3px, 3px, 3px, 3px);
+        background: $color-second-default;
+        color: $color-default;
+        border: 0;
+        font-size: 20px;
+        font-weight: 500;
+
+        &:hover {
+          background: $color-default;
+          color:#fff;
+        }
+      }
+    }
+  }
+
+  .right{
+    @include mp-width(570px, $m: 60px 0 0 0);
+
+    .area-infos{
+      @include mp-width();
+      
+      li{
+        @include mp-width();
+        font-size: 16px;
+        color: #444444;
+        @include mp-sombra();
+        line-height: 25px;
+        padding:  0 0 0 30px;
+
+        &.telefone{
+          background: url("../imgs/telefone.png") center left no-repeat;
+        }
+
+        &.email{
+          background: url("../imgs/email.png") center left no-repeat;
+        }
+
+        &.local{
+          background: url("../imgs/local.png") 0 5px no-repeat;
+        }
+
+      }
+      
+      .divider{
+        @include mp-width(100%, 1px, $m: 20px 0);
+        background:#F0F0F0;
+      }
+      
+      #mapa{
+        @include mp-width($m: 37px 0 0 0);
+      }
+    }
+  }
+}

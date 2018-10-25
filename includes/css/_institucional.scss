@@ -1,0 +1,76 @@
+@import "settings";
+@import "../../core/scss/mixins";
+
+#_institucional-page {
+
+  .categorias {
+    @include mp-width(auto, auto, $c: true);
+
+    ul {
+      @include mp-width(auto);
+
+      li {
+        @include mp-width(auto, $m: 0 5px 0 0);
+        display: inline-block;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        a {
+          @include mp-width(auto);
+          padding: 15px 20px;
+          @include mp-br(3px, 3px, 3px, 3px);
+          font-size: 16px;
+          color: $color-default;
+          @include mp-sombra();
+          font-weight: 500;
+
+          &:hover, &.ativo {
+            background: $color-second-default;
+          }
+        }
+      }
+    }
+  }
+
+  .area-txt {
+    @include mp-width(800px, auto, $c: true);
+    margin-top: 50px;
+    font-size: 16px;
+    color: #111111;
+    @include mp-sombra();
+    line-height: 25px;
+    text-align: center;
+  }
+
+  .area-logos-parceiros {
+    @include mp-calc(width, '100% + 25px');
+    float: right;
+    margin-top: 40px;
+    @include centralizar;
+
+    li {
+      @include mp-width($m: 0 0 25px);
+      @include centralizar;
+
+      &:last-child{
+        margin-bottom: 0;
+      }
+
+      a {
+        @include mp-calc(width, '100% / 6 - 25px');
+        float: left;
+        margin: 0 0 0 25px;
+        border: 2px solid #EEEEEE;
+        @include centralizar;
+        height: 120px;
+        @include mp-br(10px, 10px, 10px, 10px);
+
+        &:hover {
+          border-color: $color-default;
+        }
+      }
+    }
+  }
+}

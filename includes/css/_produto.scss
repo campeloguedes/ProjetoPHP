@@ -1,0 +1,384 @@
+@import "settings";
+@import "../../core/scss/mixins";
+
+#_produto-page {
+  padding: 20px 0;
+
+  .left {
+    @include mp-width(450px, auto, 0 20px 0 0);
+    opacity: 0;
+  }
+
+  .right {
+    @include mp-calc(width, '100% - 470px');
+    float: left;
+
+    .top-desc {
+      @include mp-width();
+      border: 2px solid #EEEEEE;
+      padding: 25px 20px;
+      @include mp-br(3px, 3px, 3px, 3px);
+
+      h1 {
+        @include mp-width();
+        font-size: 32px;
+        color: $color-default;
+        font-weight: 500;
+        @include mp-sombra();
+      }
+
+      h2 {
+        @include mp-width();
+        font-size: 16px;
+        color: #444444;
+        @include mp-sombra();
+        line-height: 30px;
+
+        a {
+          color: $color-default;
+          text-decoration: underline;
+        }
+      }
+
+      p {
+        @include mp-width($m: 30px 0);
+        padding: 0;
+        font-size: 16px;
+        line-height: 22px;
+        color: #444444;
+        @include mp-sombra();
+      }
+
+      .preco {
+        @include mp-width();
+        font-size: 24px;
+        color: $color-default;
+        font-weight: 700;
+        @include mp-sombra();
+      }
+
+      .formas {
+        @include mp-width();
+        font-size: 16px;
+        color: #444444;
+        @include mp-sombra();
+
+        span {
+          color: $color-default;
+          font-weight: 500;
+        }
+      }
+    }
+
+    .area-social {
+      @include mp-width(100%, 52px, 20px 0 0 0);
+      background: #FFF4D8;;
+      @include centralizar;
+      justify-content: flex-start;
+      @include mp-br(3px, 3px, 3px, 3px);
+      padding: 0 10px;
+
+      .social {
+        @include mp-width(auto);
+        @include centralizar;
+
+        //@TODO: each social
+        $social: facebook instagram twitter;
+        @each $socialnetwork in $social {
+          .#{$socialnetwork} {
+            @include mp-width(32px, 32px, 0 5px 0 0);
+            background: url("../imgs/#{$socialnetwork}-c.png") center no-repeat;
+            &:focus,
+            &:hover {
+              opacity: 0.7;
+            }
+          }
+        }
+        .twitter {
+          margin: 0;
+        }
+      }
+
+      .txt {
+        @include mp-width(auto, $m: 0 0 0 20px);
+        color: $color-default;
+        @include mp-sombra();
+      }
+    }
+
+    .infos-bottom {
+      @include mp-width($m: 20px 0 0 0);
+
+      .anunciantes {
+        @include mp-calc(width, '100% - 280px');
+        float: left;
+        margin-right: 20px;
+        border: 2px solid #EEEEEE;
+        padding: 25px 20px;
+        @include mp-br(2px, 2px, 2px, 2px);
+
+        h1 {
+          @include mp-width();
+          font-size: 18px;
+          font-weight: 500;
+          color: $color-default;
+          @include mp-sombra();
+        }
+
+        .top-anunciante {
+          @include mp-width($m: 20px 0 0 0);
+          @include centralizar;
+          justify-content: flex-start;
+
+          .foto {
+            @include mp-width(100px, 75px);
+            @include centralizar;
+            @include mp-br(2px, 2px, 2px, 2px);
+            border: 2px solid $color-second-default;
+          }
+
+          .nome-anunciante {
+            @include mp-width(auto, $m: 0 0 0 15px);
+            font-size: 24px;
+            color: $color-default;
+            @include mp-sombra();
+          }
+
+        }
+
+        .infos-anunciantes {
+          @include mp-width($m: 25px 0 20px 0);
+          padding-bottom: 20px;
+          border-bottom: 1px solid #EEEEEE;
+
+          li {
+            @include mp-width($m: 0 0 4px 0);
+            font-size: 16px;
+            color: #444444;
+            @include mp-sombra();
+            padding: 0 0 0 30px;
+            @include centralizar;
+            justify-content: flex-start;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+
+            &.telefone {
+              background: url("../imgs/telefone.png") center left no-repeat;
+            }
+
+            &.whatsapp {
+              background: url("../imgs/whatsapp.png") center left no-repeat;
+            }
+
+            &.email {
+              background: url("../imgs/email.png") center left no-repeat;
+            }
+          }
+        }
+
+        .area-local {
+          @include mp-width();
+
+          li {
+            @include mp-width();
+            padding: 0 0 0 30px;
+            background: url("../imgs/local.png") 0 5px no-repeat;
+            font-size: 16px;
+            color: #444444;
+            @include mp-sombra();
+            line-height: 22px;
+          }
+
+          #mapa {
+            @include mp-width($m: 30px 0 0 0);
+          }
+        }
+      }
+
+      .area-form {
+        @include mp-width(260px, $f: right);
+        border: 2px solid $color-default;
+        @include mp-br(3px, 3px, 3px, 3px);
+        padding: 20px;
+
+        h1 {
+          @include mp-width($m: 0 0 20px 0);
+          font-size: 18px;
+          color: $color-default;
+          font-weight: 500;
+          @include mp-sombra();
+        }
+
+        .cmp {
+          @include mp-width($m: 0 0 10px 0);
+
+          input,
+          textarea {
+            @include mp-width(100%, 50px);
+            border: 2px solid #EEEEEE;
+            @include mp-br(2px, 2px, 2px, 2px);
+            padding: 0 20px;
+            font-size: 14px;
+            color: #444444;
+            box-shadow: none !important;
+            @include mp-sombra();
+            @include mp-placeholder() {
+              opacity: 1;
+              font-size: 14px;
+              color: #444444;
+              @include mp-sombra();
+            }
+
+            &:focus {
+              border-color: $color-default;
+            }
+          }
+
+          textarea {
+            padding: 20px;
+            height: 160px;
+          }
+
+        }
+
+        button {
+          @include mp-width(100%, 50px);
+          @include mp-br(3px, 3px, 3px, 3px);
+          background: $color-default;
+          border: 0;
+          font-size: 20px;
+          font-weight: 500;
+          color: #fff;
+
+          &:hover {
+            background: $color-second-default;
+          }
+        }
+
+      }
+    }
+  }
+
+  .area-tit-produtos {
+    @include mp-width(100%, 2px, 70px 0 0 0);
+    background: $color-second-default;
+    position: relative;
+
+    .tit-int {
+      @include mp-width(auto);
+      background: #fff;
+      padding: 0 40px;
+      @include absolute-center;
+      font-size: 32px;
+      color: $color-default;
+      font-weight: 500;
+      @include mp-sombra();
+
+      span {
+        font-weight: 100;
+      }
+    }
+  }
+
+  .area-slider-produtos {
+    @include mp-width($m: 60px 0 0 0);
+
+    #produtospagination {
+      height: 0;
+      position: relative;
+      bottom: -20px;
+      display: none;
+
+      .swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
+        margin: 0 5px 0 0;
+
+        &.swiper-pagination-bullet-active {
+          background: $color-default;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    .area-navs {
+      @include mp-width(100%, 0, -40px 0 0 0);
+      @include absolute-center;
+      z-index: 500;
+
+      .prevprodutos {
+        @include mp-width(19px, 32px, 0 0 0 -80px);
+        background: url("../imgs/prevprodutosint.png") center no-repeat;
+      }
+
+      .nextprodutos {
+        @include mp-width(19px, 32px, 0 -80px 0 0, right);
+        background: url("../imgs/nextprodutosint.png") center no-repeat;
+      }
+    }
+
+    .produtos {
+      @include mp-width();
+
+      a {
+
+        .content-int {
+          @include mp-width();
+
+          .foto {
+            @include mp-width();
+
+            img {
+              @include mp-width();
+              @include mp-animacao();
+            }
+          }
+
+          .tit-categorias {
+            @include mp-width($m: 20px 0 5px 0);
+            text-align: center;
+            font-size: 12px;
+            color: #888888;
+            @include mp-sombra();
+          }
+
+          .tit-produtos {
+            @include mp-width();
+            position: relative;
+            font-size: 16px;
+            font-weight: 500;
+            color: #444444;
+            @include mp-sombra();
+            @include mp-truncate(270px);
+            @include mp-animacao();
+            .mask-tit {
+              @include mp-width(100px, 30px);
+              background: url("../imgs/mask-tit.png") center no-repeat;
+              position: absolute;
+              right: 0;
+            }
+          }
+
+          .preco {
+            @include mp-width($m: 15px 0 0 0);
+            text-align: center;
+            font-size: 20px;
+            font-weight: 500;
+            @include mp-sombra();
+            color: #2A2A7F;
+          }
+
+        }
+
+        &:hover .tit-produtos {
+          color: $color-default;
+        }
+      }
+    }
+  }
+}

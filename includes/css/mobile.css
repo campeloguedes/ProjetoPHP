@@ -1,0 +1,512 @@
+@media (max-width: 1023px) {
+    .title-bar {
+        display: flex;
+    }
+
+    #conteudo-page{
+      margin-top: 50px;
+   }
+
+    #area-top,
+    #categorias,
+    #destaque .area-navs {
+        display: none;
+    }
+
+    .area-page-tit-mobile {
+        display: block !important;
+    }
+
+    #_institucional-page .area-logos-parceiros {
+        display: none !important;
+    }
+
+    #_produto-page .right .infos-bottom .anunciantes {
+        width: 100%;
+        float: left;
+        margin: 0 0 20px 0;
+    }
+
+    #_produto-page .right .infos-bottom .area-form {
+        width: 100%;
+        float: left;
+    }
+
+    #empresas-mobile{
+        display: block;
+    }
+
+    #opcoes .opcoes-int .opc h1 {
+        font-size: 17px;
+    }
+
+    #opcoes .opcoes-int .opc p {
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    #_produto-page .area-slider-produtos .area-navs{
+        display: none;
+    }
+
+    #_produto-page .area-slider-produtos #produtospagination{
+        display: block !important;
+    }
+
+}
+
+@media (max-width: 967px) {
+
+    .mei .mei-int h1 {
+        font-size: 36px;
+        margin: -50px 0 0 0;
+    }
+
+    .mei .mei-int h2 {
+        font-size: 18px;
+    }
+
+
+    #opcoes .opcoes-int .opc {
+        width: calc(100% / 2 - 20px);
+    }
+
+    #opcoes .opcoes-int .a {
+        display: block;
+    }
+
+    #objetivos .area-objetivos p {
+        width: 100%;
+        float: left;
+        display: block;
+    }
+
+    #_listagem-page .left {
+        display: none;
+    }
+
+    #_listagem-page .right {
+        width: 100%;
+        float: left;
+    }
+
+    .select-mobile {
+        display: block !important;
+    }
+
+    .area-page-tit {
+        background: none;
+    }
+
+    .area-page-tit h1 {
+        width: 100%;
+        float: left;
+        padding: 0;
+        text-align: center;
+    }
+
+    #_institucional-page .area-txt {
+        width: 100%;
+        float: left;
+    }
+
+    #_institucional-page .categorias {
+        display: none;
+    }
+
+    #_institucional-page .area-txt {
+        margin-top: 20px;
+    }
+
+    .area-page-tit {
+        margin: 50px 0;
+    }
+
+    #_produto-page .left {
+        width: 100%;
+        float: left;
+        margin-right: 0;
+    }
+
+    .slideshow .slice {
+        width: 100%;
+        float: left;
+    }
+
+    .area-thumb {
+        display: none;
+    }
+
+    #_produto-page .right {
+        width: 100%;
+        float: left;
+        margin-top: 40px;
+    }
+
+    .slice-photo-content {
+        height: auto;
+    }
+
+    #_produto-page .right .top-desc h1 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    #_produto-page .right .top-desc p {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    #_produto-page .right .top-desc .preco {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    #_produto-page .right .top-desc .formas,
+    #_produto-page .right .top-desc h2 {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    #_produto-page .right .area-social {
+        height: auto;
+        padding: 10px;
+    }
+
+    .social-mobile-center {
+        width: 100%;
+        float: left;
+        display: -ms-flex;
+        display: -webkit-flex;
+        display: flex;
+        /* centraliza na vertical */
+        -ms-align-items: center;
+        -webkit-align-items: center;
+        align-items: center;
+        /* centraliza na horizontal */
+        -ms-justify-content: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+    }
+
+    #_produto-page .right .area-social .txt {
+        display: none;
+    }
+
+    #_produto-page .right .area-social .social {
+        width: 100%;
+        float: left;
+    }
+
+    #_produto-page .right .infos-bottom .anunciantes .top-anunciante {
+        display: block;
+    }
+
+    #_produto-page .right .infos-bottom .anunciantes .top-anunciante .nome-anunciante {
+        width: 100%;
+        float: left;
+        text-align: center;
+        margin: 10px 0 0 0;
+    }
+
+    #_produto-page .right .infos-bottom .anunciantes .top-anunciante .foto {
+        float: none;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #_produto-page .right .infos-bottom .anunciantes h1 {
+        text-align: center;
+    }
+
+    #_produto-page .right .infos-bottom .anunciantes .infos-anunciantes li,
+    #_produto-page .right .infos-bottom .anunciantes .area-local li{
+        background: none !important;
+        padding: 0;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #_produto-page .right .infos-bottom .area-form h1{
+        text-align: center;
+    }
+
+    #_produto-page .area-tit-produtos .tit-int{
+        width: 320px;
+        font-size: 22px;
+        line-height: 24px;
+        text-align: center;
+    }
+
+
+    #_noticia-page .area-noticia h1{
+        width: 100%;
+        float: left;
+        font-size: 24px;
+        line-height: 24px;
+        display: block;
+        margin: 0;
+    }
+
+    #_noticia-page .area-noticia p{
+        width: 100%;
+        float: left;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    #_noticia-page .area-noticia .data{
+        font-size: 14px;
+    }
+
+    #_noticia-page .leia-mais .tit{
+        font-size: 24px;
+        text-align: center;
+    }
+
+    #_noticia-page .leia-mais .area-noticias a h1{
+        text-align: center;
+    }
+
+    #_noticia-page .leia-mais .area-noticias a h2{
+        font-size: 16px;
+        text-align: center;
+    }
+
+    #_contato-page .left{
+        width: 100%;
+        float: left;
+        margin: 15px 0 0 0;
+    }
+
+    #_contato-page .right{
+        width: 100%;
+        float: left;
+    }
+
+    #_contato-page .right .area-infos li{
+        background:none !important;
+        text-align: center;
+        padding: 0;
+    }
+
+    .cycle-pager{
+        display: block !important;
+    }
+
+}
+
+@media (max-width: 850px){
+    #_anuncie-page .area-anuncie .area-anuncie-int{
+        width: 100%;
+        float: left;
+    }
+}
+
+@media (max-width: 767px) {
+
+    /*tit page*/
+    #produtos .tit-page {
+        font-size: 22px;
+    }
+
+    #produtos .area-produtos a .tit-produtos,
+    #_listagem-page .right .area-produtos a .tit-produtos,
+    #_produto-page .area-slider-produtos .produtos a .content-int .tit-produtos{
+        font-size: 13px;
+    }
+
+    #produtos .area-produtos a .preco,
+    #_listagem-page .right .area-produtos a .preco,
+    #_produto-page .area-slider-produtos .produtos a .content-int .preco{
+        font-size: 14px;
+    }
+
+    #produtos .area-produtos .a,
+    #_listagem-page .right .area-produtos .a {
+        display: none;
+    }
+
+    #produtos .area-produtos .b,
+    #_listagem-page .right .area-produtos .b {
+        display: block;
+    }
+
+    #produtos .area-produtos a,
+    #_listagem-page .right .area-produtos a {
+        width: calc(100% / 2 - 20px);
+    }
+
+    #destaque #destaquepagination {
+        position: relative;
+        bottom: -10px;
+        margin: 0;
+    }
+
+    #destaque #destaquepagination .swiper-pagination-bullet.swiper-pagination-bullet {
+        background: #2A2A7F;
+    }
+
+    #destaque #destaquepagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+        background: #2A2A7F;
+    }
+
+    #opcoes .opcoes-int {
+        width: 100%;
+        float: left;
+    }
+
+    #opcoes .opcoes-int .opc {
+        width: 100%;
+        height: auto;
+        float: left;
+        margin: 0 0 20px 0;
+    }
+
+    #opcoes .opcoes-int .opc:last-child {
+        margin-bottom: 0;
+    }
+
+    #opcoes .opcoes-int .a {
+        display: none;
+    }
+
+    #empresas .tit-empresa .tit-empresa-int {
+        width: 320px;
+        font-size: 22px;
+        line-height: 24px;
+    }
+
+    #objetivos .area-objetivos p {
+        font-size: 14px;
+    }
+
+    #objetivos .area-objetivos h1 {
+        font-size: 18px;
+    }
+
+    #objetivos .area-objetivos {
+        padding: 20px;
+    }
+
+    .infos-rodape .area-infos {
+        display: none;
+    }
+
+    .infos-rodape .area-menus {
+        width: 100%;
+        float: left;
+    }
+
+    #_listagem-page .right .filtro {
+        display: none;
+    }
+
+    #_anuncie-page .area-anuncie .area-anuncie-int .left{
+        width: 100%;
+        float: left;
+        margin: 0;
+    }
+
+    .area-page-tit h1,
+    .area-page-tit-mobile h1{
+        font-size: 26px;
+    }
+
+    #_anuncie-page .area-anuncie .area-anuncie-int .right{
+        width: 100%;
+        float: left;
+        margin-top: 20px;
+    }
+
+    #_anuncie-page .area-anuncie .area-anuncie-int{
+        display: block;
+        margin: 0;
+    }
+
+    #_noticias-page .area-noticias a h1{
+        text-align: center;
+    }
+
+    #_noticias-page .area-noticias a h2{
+        font-size: 16px;
+        text-align: center;
+    }
+
+    #_noticias-page .area-noticias{
+        margin: 0;
+    }
+
+}
+
+@media (max-width: 550px) {
+    .infos-rodape .area-menus .colunas {
+        width: 100%;
+        float: left;
+        margin-bottom: 30px;
+    }
+
+    .infos-rodape .area-menus .colunas:last-child {
+        margin-bottom: 0;
+    }
+
+    .infos-rodape .area-menus .colunas .tit {
+        text-align: center;
+    }
+
+    .infos-rodape .area-menus .colunas ul li a {
+        justify-content: center;
+    }
+
+    .infos-rodape .area-menus .colunas ul li.icone a {
+        width: auto;
+        display: table;
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 467px) {
+
+    #produtos .area-btn a {
+        margin-top: 30px;
+        font-size: 15px;
+    }
+
+    #copy .area-copy {
+        height: auto;
+        padding: 15px;
+        text-align: center;
+    }
+
+    #copy .area-copy .palmasite {
+        width: 100%;
+        float: left;
+        background-position: center center !important;
+        margin-top: 10px;
+    }
+
+    #_anuncie-page .area-anuncie .area-anuncie-int .left .cmp .whats{
+        width:auto;
+        float: right;
+        position: relative;
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    #_anuncie-page .area-anuncie .area-anuncie-int .left .cmp .whats input{
+        float: left;
+    }
+
+    #_anuncie-page .area-anuncie .area-anuncie-int .left .cmp .whats span br{
+        display: none;
+    }
+
+    #_anuncie-page .area-anuncie .area-anuncie-int .left .cmp .whats span{
+        line-height: 11px;
+        margin-right: 0;
+    }
+
+}

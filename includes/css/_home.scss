@@ -1,0 +1,1034 @@
+@import "settings";
+@import "../../core/scss/mixins";
+
+#area-top {
+  @include mp-width(100%, 110px);
+  @include centralizar;
+
+  .area-top-int {
+    @include mp-width();
+
+    .logo {
+      @include mp-width(231px, 50px);
+
+      a {
+        @include mp-width(231px, 50px);
+        background: url("../imgs/logo.png") center no-repeat;
+
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+    }
+
+    .busca {
+      @include mp-calc(width, '100% - 860px');
+      margin: 0 0 0 35px;
+      float: left;
+      position: relative;
+
+      input {
+        @include mp-width(100%, 50px);
+        border: 3px solid #FFD364;
+        @include mp-br(3px, 3px, 3px, 3px);
+        padding: 0 50px 0 20px;
+        @include mp-sombra();
+        color: #444444;
+        font-size: 14px;
+        box-shadow: none !important;
+
+        @include mp-placeholder() {
+          color: #444444;
+          opacity: 1;
+        }
+      }
+
+      button {
+        @include mp-width(22px, 22px, -35px 20px 0 0px, right);
+        background: url("../imgs/lupa.png") center no-repeat;
+
+        &:hover {
+          opacity: .5;
+        }
+      }
+    }
+
+    .area-info {
+      @include mp-width(257px, 50px, 0 0 0 30px);
+      background: url("../imgs/balao.png") center left no-repeat;
+      padding: 0 0 0 45px;
+      @include centralizar;
+
+      .area-info-int {
+
+        @include mp-width();
+
+        .telefone {
+          @include mp-width($m: -7px 0 0 0);
+          color: #2A2A7F;
+          font-weight: 700;
+          font-size: 18px;
+          @include mp-sombra();
+        }
+
+        .email {
+          @include mp-width();
+          font-size: 12px;
+          line-height: 6px;
+          color: #444444;
+          @include mp-sombra();
+
+          &:hover {
+            color: $color-second-default;
+            @include mp-sem-sombra;
+          }
+        }
+      }
+    }
+
+    .area-menu-default {
+      @include mp-width(46px, 50px, 0 0 0 50px);
+      border: 2px solid #E9E9F2;
+      @include mp-br(3px, 3px, 3px, 3px);
+      position: relative;
+      cursor: pointer;
+      @include mp-animacao();
+
+      &:hover {
+        border-color: $color-default;
+      }
+
+      i {
+        @include mp-width(26px, 16px);
+        background: url("../imgs/i-menu.png") center no-repeat;
+        @include absolute-center;
+      }
+
+      .sub-menu {
+        @include mp-width(275px);
+        background: #fff;
+        position: absolute;
+        z-index: 500;
+        top: 46px;
+        right: -2px;
+        @include mp-br(3px, 0px, 3px, 3px);
+        display: none;
+        cursor: default !important;
+        -webkit-box-shadow: 0px 5px 10px 0px rgba(50, 50, 50, 0.5);
+        -moz-box-shadow: 0px 5px 10px 0px rgba(50, 50, 50, 0.5);
+        box-shadow: 0px 5px 10px 0px rgba(50, 50, 50, 0.5);
+
+        &.open {
+          display: block;
+        }
+
+        .menu-int {
+          @include mp-width();
+          padding: 30px;
+
+          h1 {
+            @include mp-width($m: 0 0 15px);
+            font-size: 20px;
+            color: #2A2A7F;
+            font-weight: 500;
+            @include mp-sombra();
+          }
+
+          ul {
+            @include mp-width();
+            li {
+              @include mp-width($m: 4px 0 4px 0);
+
+              &:last-child {
+                margin-bottom: 0;
+              }
+
+              a {
+                @include mp-width();
+                font-size: 16px;
+                color: #444444;
+                @include mp-sombra();
+                position: relative;
+
+                &:hover {
+                  color: $color-default;
+                }
+
+                &.ativo {
+                  color: $color-default;
+                  font-weight: 500;
+                }
+              }
+            }
+          }
+        }
+
+        .click-close {
+          @include mp-width(46px, 50px);
+          background: transparent;
+          position: absolute;
+          top: -48px;
+          right: 0;
+          border: 2px solid #fff;
+          cursor: pointer !important;
+          z-index: 500;
+          @include mp-br(3px, 3px, 0px, 0px);
+        }
+
+        .dtl-submenu {
+          @include mp-width(46px, 50px);
+          background: #fff;
+          position: absolute;
+          top: -48px;
+          right: 0;
+          border: 2px solid #fff;
+          @include mp-br(3px, 3px, 0px, 0px);
+        }
+      }
+    }
+
+    .btn-anuncie {
+      @include mp-width(190px, 50px, 0 0 0 20px);
+      background: #FFD364;
+      @include centralizar;
+      font-size: 20px;
+      color: $color-default;
+      @include mp-br(3px, 3px, 3px, 3px);
+      font-weight: 500;
+
+      &:hover {
+        background: $color-default;
+        color: $color-second-default;
+      }
+    }
+  }
+}
+
+#categorias {
+  @include mp-width(100%, 110px);
+  background: $color-default;
+  @include centralizar;
+
+  .categorias-int {
+    @include mp-width(100%, 70px);
+
+    .item-categoria {
+      @include mp-calc(width, '100% / 8');
+      float: left;
+      border-right: 2px solid #40408C;
+      @include centralizar;
+      position: relative;
+
+       &:hover > a h1 {
+        color: $color-second-default !important;
+      }
+
+
+      .subcategoria{
+        @include mp-width(180px);
+        position: absolute;
+        top: 70px;
+        left: 0px;
+        background: $color-default;
+        z-index: 500;
+        display: none;
+        @include mp-br(0px, 0px, 3px, 3px);
+        padding: 25px 15px 15px;
+        cursor: default !important;
+
+        .lk {
+          @include mp-width();
+          color: #fff;
+          cursor: pointer !important;
+          border-bottom: 1px solid #434384;
+          padding: 10px 0 10px 0;
+          line-height: 19px;
+
+          &:last-child {
+            border-bottom: 0;
+            padding-bottom: 0;
+          }
+
+          &:hover {
+            color: $color-second-default;
+          }
+        }
+      }
+
+      &:hover .subcategoria {
+        display: block;
+      }
+
+      a {
+        @include mp-width(auto);
+        float: left;
+        height: 70px;
+        padding: 0 10px;
+        position: relative;
+
+
+
+
+        &.ativo {
+
+          i.alimentacao {
+            background: url('../imgs/icones.png') no-repeat 0 -26px !important;
+          }
+
+          i.moda {
+            background: url('../imgs/icones.png') no-repeat -141px -26px !important;
+          }
+
+          i.lembrancinhas {
+            background: url('../imgs/icones.png') no-repeat -291px -26px !important;
+          }
+
+          i.decoracao {
+            background: url('../imgs/icones.png') no-repeat -438px -26px !important;
+          }
+
+          i.bebe {
+            background: url('../imgs/icones.png') no-repeat -581px -26px !important;
+          }
+
+          i.campim {
+            background: url('../imgs/icones.png') no-repeat -723px -26px !important;
+          }
+
+          i.artesanato {
+            background: url('../imgs/icones.png') no-repeat -870px -26px !important;
+          }
+
+          i.outros {
+            background: url('../imgs/icones.png') no-repeat -1015px -26px !important;
+          }
+
+          h1 {
+            color: $color-second-default !important;
+          }
+        }
+
+        .int {
+          @include mp-width(100%, 70px);
+
+          i {
+            @include centralizar;
+            width: 100% !important;
+            height: 26px !important;
+
+            &.alimentacao {
+              @include mp-width(24px, 24px, $c: true);
+              background: url('../imgs/icones.png') no-repeat 0 0;
+            }
+
+            &.moda {
+              @include mp-width(32px, 24px, $c: true);
+              background: url('../imgs/icones.png') no-repeat -141px 0;
+            }
+
+            &.lembrancinhas {
+              @include mp-width(21px, 24px, $c: true);
+              background: url('../imgs/icones.png') no-repeat -291px 0;
+            }
+
+            &.decoracao {
+              @include mp-width(18px, 24px, $c: true);
+              background: url('../imgs/icones.png') no-repeat -438px 0;
+            }
+
+            &.bebe {
+              @include mp-width(21px, 24px, $c: true);
+              background: url('../imgs/icones.png') no-repeat -581px 0;
+            }
+
+            &.campim {
+              @include mp-width(27px, 24px, $c: true);
+              background: url('../imgs/icones.png') no-repeat -723px 0;
+            }
+
+            &.artesanato {
+              @include mp-width(24px, 24px, $c: true);
+              background: url('../imgs/icones.png') no-repeat -870px 0;
+            }
+
+            &.outros {
+              @include mp-width(24px, 24px, $c: true);
+              background: url('../imgs/icones.png') no-repeat -1015px 0;
+            }
+          }
+
+          h1 {
+            @include mp-width($m: 10px 0 0 0);
+            font-size: 16px;
+            color: #fff;
+            font-weight: 500;
+            line-height: 16px;
+            text-align: center;
+          }
+        }
+
+
+
+        &:hover h1, &:hover > a h1 {
+          color: $color-second-default;
+        }
+
+        &:hover i.alimentacao {
+          background: url('../imgs/icones.png') no-repeat 0 -26px;
+        }
+
+        &:hover i.moda {
+          background: url('../imgs/icones.png') no-repeat -141px -26px;
+        }
+
+        &:hover i.lembrancinhas {
+          background: url('../imgs/icones.png') no-repeat -291px -26px;
+        }
+
+        &:hover i.decoracao {
+          background: url('../imgs/icones.png') no-repeat -438px -26px;
+        }
+
+        &:hover i.bebe {
+          background: url('../imgs/icones.png') no-repeat -581px -26px;
+        }
+
+        &:hover i.campim {
+          background: url('../imgs/icones.png') no-repeat -723px -26px;
+        }
+
+        &:hover i.artesanato {
+          background: url('../imgs/icones.png') no-repeat -870px -26px;
+        }
+
+        &:hover i.outros {
+          background: url('../imgs/icones.png') no-repeat -1015px -26px;
+        }
+      }
+
+      &:last-child {
+        border-right: 0;
+      }
+    }
+  }
+}
+
+#destaque {
+
+  #destaquepagination {
+    @include horizontal-center;
+    bottom: 20px;
+
+    .swiper-pagination-bullet {
+      @include mp-width(6px, 6px, $m: 0 8px 0 0);
+      opacity: 0.5;
+      @include mp-animacao;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &.swiper-pagination-bullet-active {
+        opacity: 1;
+      }
+    }
+  }
+
+  .area-navs {
+    @include mp-width(100%, 32px);
+    @include absolute-center;
+    z-index: 50;
+    padding: 0 260px;
+
+    .prevdestaque {
+      @include mp-width(19px, 32px);
+      background: url("../imgs/prevdestaque.png") center no-repeat;
+
+      &:hover {
+        margin-left: -5px;
+      }
+    }
+
+    .nextdestaque {
+      @include mp-width(19px, 32px, $f: right);
+      background: url("../imgs/netxdestaque.png") center no-repeat;
+
+      &:hover {
+        margin-right: -5px;
+      }
+    }
+  }
+
+  .destaque {
+    @include mp-width();
+
+    .content-int {
+      @include mp-width();
+
+    }
+  }
+}
+
+#produtos {
+
+  @include tit-page();
+
+  .area-produtos {
+    @include mp-calc(width, '100% + 20px');
+    float: right;
+
+    a {
+      @include mp-calc(width, '100% / 4 - 20px');
+      float: left;
+      margin: 0 0 0 20px;
+
+      .foto {
+        @include mp-width();
+
+        img {
+          @include mp-width();
+          @include mp-animacao();
+        }
+      }
+
+      .tit-categorias {
+        @include mp-width($m: 20px 0 5px 0);
+        text-align: center;
+        font-size: 12px;
+        color: #888888;
+        @include mp-sombra();
+      }
+
+      .tit-produtos {
+        @include mp-width();
+        position: relative;
+        font-size: 16px;
+        font-weight: 500;
+        color: #444444;
+        @include mp-sombra();
+        @include mp-truncate(270px);
+        @include mp-animacao();
+        .mask-tit {
+          @include mp-width(100px, 30px);
+          background: url("../imgs/mask-tit.png") center no-repeat;
+          position: absolute;
+          right: 0;
+        }
+      }
+
+      .preco {
+        @include mp-width($m: 15px 0 0 0);
+        text-align: center;
+        font-size: 20px;
+        font-weight: 500;
+        @include mp-sombra();
+        color: #2A2A7F;
+      }
+
+      &:hover .foto img {
+        @include mp-scale(1.02);
+      }
+
+      &:hover .tit-produtos {
+        color: $color-default;
+        @include mp-sem-sombra;
+      }
+
+    }
+
+    .a {
+      @include mp-width($m: 20px 0);
+    }
+
+    .b {
+      @include mp-width($m: 20px 0);
+      display: none;
+    }
+  }
+
+  .area-btn {
+    @include mp-width();
+    @include centralizar;
+
+    a {
+      @include mp-width(auto, $m: 60px 0 0 0);
+      padding: 10px 40px;
+      border: 2px solid $color-second-default;
+      @include centralizar;
+      text-align: center;
+      font-size: 20px;
+      font-weight: 500;
+      color: $color-default;
+
+      &:hover {
+        background: $color-second-default;
+      }
+    }
+  }
+}
+
+.mei {
+  @include mp-width($m: 30px 0 0 0);
+
+  .mei-int {
+    @include mp-width(100%, 400px);
+    background: url(../imgs/img03.jpg) no-repeat fixed bottom;
+    background-size: cover !important;
+    -webkit-background-attachment: fixed;
+    -moz-background-attachment: fixed;
+    -ms-background-attachment: fixed;
+    -o-background-attachment: fixed;
+    @include centralizar;
+
+    h1 {
+      @include mp-width($m: -75px 0 0 0);
+      font-size: 52px;
+      color: #fff;
+      font-weight: 900;
+      text-align: center;
+    }
+
+    h2 {
+      @include mp-width();
+      font-size: 28px;
+      color: #fff;
+      text-align: center;
+
+      span {
+        font-weight: 900;
+        color: $color-second-default;
+      }
+    }
+  }
+}
+
+#opcoes {
+
+  .opcoes-int {
+    @include mp-calc(width, '100% + 20px');
+    float: right;
+    margin: -80px 0 0 0;
+
+    .opc {
+      @include mp-calc(width, '100% / 4 - 20px');
+      float: left;
+      margin: 0 0 0 20px;
+      height: 330px;
+      background: $color-default;
+      @include mp-br(9px, 9px, 9px, 9px);
+      position: relative;
+      padding: 0 0 20px 0;
+      @include mp-animacao();
+
+      &:hover {
+        @include mp-scale(1.04);
+      }
+
+      .dtl-opc {
+        @include mp-width(100px, 100px);
+        background: $color-second-default;
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include mp-br(9px, 0px, 0px, 0px);
+        -webkit-clip-path: polygon(0 0, 0 99%, 100% 0);
+        clip-path: polygon(0 0, 0 99%, 100% 0);
+        @include centralizar;
+
+        .numero {
+          @include mp-width($m: -32px 0 0 18px);
+          font-size: 36px;
+          font-weight: 900;
+          color: #fff;
+        }
+      }
+
+      i {
+        @include mp-width($c: true);
+        margin-top: 35px;
+
+        &.lapis {
+          width: 64px;
+          height: 64px;
+          background: url("../imgs/lapis.png") center no-repeat;
+        }
+
+        &.engrenagem {
+          width: 64px;
+          height: 64px;
+          background: url("../imgs/engrenagem.png") center no-repeat;
+        }
+
+        &.carrinho {
+          width: 60px;
+          height: 64px;
+          background: url("../imgs/carrinho.png") center no-repeat;
+        }
+
+        &.porco {
+          width: 64px;
+          height: 62px;
+          background: url("../imgs/porco.png") center no-repeat;
+        }
+      }
+
+      h1 {
+        @include mp-width($m: 25px 0 0 0);
+        padding: 0 20px;
+        font-size: 24px;
+        color: $color-second-default;
+        font-weight: 500;
+        text-align: center;
+      }
+
+      p {
+        @include mp-width($m: 15px 0 0 0);
+        font-size: 16px;
+        color: #fff;
+        padding: 0 20px;
+        line-height: 22px;
+        text-align: center;
+      }
+    }
+
+    .a {
+      @include mp-width($m: 10px 0);
+      display: none;
+    }
+  }
+}
+
+#empresas {
+  margin-top: 70px;
+
+  .tit-empresa {
+    @include mp-width(100%, 2px);
+    background: $color-second-default;
+    position: relative;
+
+    .tit-empresa-int {
+      @include mp-width(auto);
+      padding: 0 40px;
+      @include absolute-center;
+      font-size: 32px;
+      font-weight: 500;
+      color: $color-default;
+      @include mp-sombra();
+      background: #fff;
+      text-align: center;
+      line-height: 34px;
+
+      span {
+        font-weight: 100;
+      }
+    }
+  }
+
+  .empresas {
+    @include mp-width($m: 60px 0 0 0);
+    .content-int {
+      @include mp-width(100%, 120px);
+      border: 2px solid #F0F0F0;
+      @include mp-br(10px, 10px, 10px, 10px);
+      @include centralizar;
+      @include mp-animacao();
+
+      &:hover {
+        border-color: $color-default;
+      }
+    }
+  }
+
+  .bottom-empresa {
+    @include mp-width(100%, 2px, 30px 0 0 0);
+    background: $color-second-default;
+    position: relative;
+
+    .area-pagination {
+      @include mp-width(auto, $m: -2px 0 0 0);
+      @include absolute-center;
+      background: #fff;
+      padding: 0 25px;
+
+      #empresaspagination {
+        position: relative;
+
+        .swiper-pagination-bullet {
+          width: 6px;
+          height: 6px;
+          margin: 0 5px 0 0;
+
+          &.swiper-pagination-bullet-active {
+            background: $color-default;
+          }
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+#empresas-mobile {
+  margin-top: 30px;
+  display: none;
+
+  .tit-empresa {
+    @include mp-width(100%, 2px);
+    background: $color-second-default;
+    position: relative;
+
+    .tit-empresa-int {
+      @include mp-width(auto);
+      padding: 0 40px;
+      @include absolute-center;
+      font-size: 32px;
+      font-weight: 500;
+      color: $color-default;
+      @include mp-sombra();
+      background: #fff;
+      text-align: center;
+      line-height: 34px;
+
+      span {
+        font-weight: 100;
+      }
+    }
+  }
+
+  .empresas {
+    @include mp-width();
+    .content-int {
+      @include mp-width(100%, 120px);
+      border: 2px solid #F0F0F0;
+      @include mp-br(10px, 10px, 10px, 10px);
+      @include centralizar;
+      @include mp-animacao();
+      padding: 20px;
+
+      &:hover {
+        border-color: $color-default;
+      }
+    }
+  }
+
+  .bottom-empresa {
+    @include mp-width(100%, 2px, 30px 0 0 0);
+    background: #fff !important;
+    position: relative;
+
+    .area-pagination {
+      @include mp-width(auto, $m: -2px 0 0 0);
+      @include absolute-center;
+      background: #fff;
+      padding: 0 25px;
+
+      #empresaspagination {
+        position: relative;
+
+        .swiper-pagination-bullet {
+          width: 6px;
+          height: 6px;
+          margin: 0 5px 0 0;
+
+          &.swiper-pagination-bullet-active {
+            background: $color-default;
+          }
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+#objetivos {
+  @include mp-width($m: 50px 0 0 0);
+
+  .area-objetivos {
+    @include mp-width();
+    border: 2px solid $color-default;
+    @include mp-br(9px, 9px, 9px, 9px);
+    padding: 40px;
+
+    h1 {
+      @include mp-width($m: 0 0 30px 0);
+      font-size: 24px;
+      text-align: center;
+      font-weight: 500;
+      @include mp-sombra();
+      color: $color-default;
+    }
+
+    p {
+      @include mp-width(800px, auto, $c: true);
+      font-size: 16px;
+      color: $color-default;
+      line-height: 22px;
+      text-align: center;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.infos-rodape {
+  @include mp-width($m: 40px 0 0 0);
+
+  .area-menus {
+    @include mp-calc(width, '100% - 275px');
+    float: left;
+
+    .colunas {
+      @include mp-calc(width, '100% / 3');
+      float: left;
+
+      .tit {
+        @include mp-width($m: 0 0 30px 0);
+        font-size: 24px;
+        font-weight: 500;
+        color: $color-default;
+      }
+
+      ul {
+        @include mp-width();
+
+        li {
+          @include mp-width($m: 0 0 12px 0);
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          &.icone {
+            @include mp-width($m: 0 0 20px 0);
+            a {
+              padding-left: 35px;
+            }
+          }
+
+          a {
+            @include mp-width();
+            font-size: 16px;
+            font-weight: 500;
+            color: $color-default;
+            @include mp-sombra();
+            @include centralizar;
+            justify-content: flex-start;
+
+            &:hover {
+              opacity: 0.5;
+            }
+
+            &.alimentacao {
+              @include mp-width(100%, 18px);
+              background: url("../imgs/i-alimentacao.png") center left no-repeat;
+            }
+
+            &.moda {
+              @include mp-width(100%, 14px);
+              background: url("../imgs/i-moda.png") center left no-repeat;
+            }
+
+            &.le {
+              @include mp-width(100%, 18px);
+              background: url("../imgs/i-le.png") center left no-repeat;
+            }
+
+            &.decoracao {
+              @include mp-width(100%, 18px);
+              background: url("../imgs/i-decoracao.png") center left no-repeat;
+            }
+
+            &.capim {
+              @include mp-width(100%, 16px);
+              background: url("../imgs/i-capim.png") center left no-repeat;
+            }
+
+            span {
+              margin-left: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .area-infos {
+    @include mp-width(275px, $f: right);
+    padding: 25px;
+    @include mp-br(9px, 9px, 9px, 9px);
+    background: $color-default;
+
+    h1 {
+      @include mp-width($m: 0 0 20px 0);
+      font-size: 24px;
+      font-weight: 500;
+      color: #fff;
+    }
+
+    .telefone {
+      @include mp-width();
+      font-size: 18px;
+      color: $color-second-default;
+      font-weight: 700;
+    }
+    .email {
+      @include mp-width();
+      font-size: 12px;
+      color: #fff;
+    }
+
+    .social {
+      @include mp-width($m: 25px 0 0 0);
+      @include centralizar;
+      justify-content: flex-start;
+
+      //@TODO: each social
+      $social: facebook youtube instagram twitter;
+      @each $socialnetwork in $social {
+        .#{$socialnetwork} {
+          @include mp-width(32px, 32px, 0 5px 0 0);
+          background: url("../imgs/#{$socialnetwork}.png") center no-repeat;
+          &:focus,
+          &:hover {
+            opacity: 0.7;
+          }
+        }
+      }
+      .twitter {
+        margin: 0;
+      }
+    }
+  }
+}
+
+#copy {
+  @include mp-width($m: 40px 0 0 0);
+  .area-copy {
+    @include mp-width(100%, 50px);
+    @include mp-br(10px, 10px, 10px, 10px);
+    background: $color-second-default;
+    @include centralizar;
+    justify-content: flex-start;
+    padding: 0 20px;
+
+    .copy {
+      @include mp-width();
+      font-weight: 500;
+      color: $color-default;
+    }
+
+    .palmasite {
+      @include mp-width(86px, 22px, $f: right);
+      background: url("../imgs/palmasite.png") center no-repeat;
+
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+}

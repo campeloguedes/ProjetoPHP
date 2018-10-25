@@ -1,0 +1,230 @@
+@import "../../includes/css/_settings";
+@import "mixins";
+
+// layout
+.fluid {
+  width: 100%;
+  height: auto;
+  float: left;
+  clear: both;
+
+  .responsive {
+    width: 100%;
+    max-width: $global-responsive;
+    margin: 0 auto;
+    height: auto;
+    padding: 0 15px;
+  }
+}
+
+/******************************
+* swipper
+*******************************/
+.swiper-wrapper {
+  opacity: 0;
+}
+
+#destaque {
+  .swiper-pagination {
+    position: relative;
+    float: left;
+    margin: -30px 0 0 0;
+
+    .swiper-pagination-bullet {
+      width: 6px;
+      height: 6px;
+      background: #fff;
+      margin: 0 20px 2px 0;
+      opacity: 1;
+
+      &.swiper-pagination-bullet-active {
+        width: 10px;
+        height: 10px;
+        margin-bottom: 0 !important;
+      }
+    }
+
+    .swiper-container-horizontal {
+      &.swiper-pagination-bullets {
+        bottom: 20px;
+      }
+    }
+  }
+}
+
+.swiper-button-disabled {
+  cursor: no-drop !important;
+}
+
+/******************************
+* Helper
+*******************************/
+
+.centraliza {
+  //noinspection CssInvalidPropertyValue
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+  /* centraliza na vertical */
+  -ms-align-items: center;
+  -webkit-align-items: center;
+  align-items: center;
+  /* centraliza na horizontal */
+  -ms-justify-content: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+/******************************
+* Menu mobile
+*******************************/
+
+.title-bar-bg-active {
+  background: $color-default !important;
+}
+
+
+.title-bar {
+  width: 100%;
+  height: 50px;
+  float: left;
+  display: none;
+  background: $color-default !important;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 2000;
+  @include mp-animacao;
+
+  button {
+    background: transparent;
+  }
+
+  .title-bar-title {
+    opacity: 1;
+  }
+
+}
+
+.m-mobile {
+  background: #fff;
+  ul {
+    margin: 50px 0 0 0;
+
+    a {
+      font-size: 13px;
+      color: $color-default;
+      @include mp-animacao;
+
+      &:hover, &.ativo {
+        background: $color-default;
+        color: #fff;
+      }
+    }
+  }
+
+  .close-button {
+    color: $color-second-default;
+    @include mp-animacao;
+
+    &:hover {
+      color: $color-default;
+    }
+  }
+
+  .menu {
+    &.vertical {
+      & > li {
+        width: 100%;
+        float: left;
+      }
+    }
+  }
+
+  .divider {
+    width: 100%;
+    height: 1px;
+    float: left;
+    background: $color-second-default;
+    opacity: .1;
+    margin: 5px 0 4px 0;
+  }
+}
+
+.js-off-canvas-overlay {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/******************************
+* content ajax default
+*******************************/
+.content-ajax {
+  @include mp-width();
+}
+
+/******************************
+* load ajax default
+*******************************/
+.load-ajax {
+  @include mp-width(100%, 100%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 6000;
+  background: rgba(17, 17, 17, 0.8);
+  @include centralizar;
+  display: none;
+
+  svg {
+    @include mp-center;
+  }
+}
+
+/******************************
+* menu fixed
+*******************************/
+.menu-fixed {
+  @include mp-width($h: 50px);
+  background: $color-default;
+  @include mp-animacao(300ms);
+  position: fixed;
+  top: -50px;
+  z-index: 1200;
+  ul {
+    @include mp-width($w: auto, $h: 50px, $c: true);
+    li {
+      @include mp-width(auto);
+      padding: 0 15px;
+      a {
+        @include mp-width(auto, 50px);
+        color: $color-second-default;
+        font-size: 14px;
+        line-height: 50;
+        &:hover, &.ativo {
+          color: $color-default;
+        }
+      }
+    }
+  }
+  &.open {
+    top: 0;
+  }
+}
+
+/******************************
+* centralizar
+*******************************/
+.centralizar {
+  //noinspection CssInvalidPropertyValue
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+  /* centraliza na vertical */
+  -ms-align-items: center;
+  -webkit-align-items: center;
+  align-items: center;
+  /* centraliza na horizontal */
+  -ms-justify-content: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}

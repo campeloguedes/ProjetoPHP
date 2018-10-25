@@ -1,0 +1,220 @@
+@import "settings";
+@import "../../core/scss/mixins";
+
+#large-house-sld {
+  width: 100%;
+  height: auto;
+  float: left;
+  margin: 0;
+  position: relative;
+
+  .mask {
+    @include mp-width(100%, 100%);
+    position: absolute;
+    z-index: 500;
+
+    .area-navs {
+      @include mp-width(100%, 0);
+      @include absolute-center;
+      padding: 0 30px;
+      opacity: 0;
+      @include mp-animacao();
+
+      #large-house-sld-arrows-next {
+        width: 50px;
+        height: 76px;
+        float: left;
+        margin: 0 5px 0 0;
+        background: url("../imgs/prevthumb.png") center no-repeat;
+        opacity: 0.8;
+      }
+
+      #large-house-sld-arrows-prev {
+        width: 50px;
+        height: 76px;
+        float: right;
+        background: url("../imgs/nextthumb.png") center no-repeat;
+        opacity: 0.8;
+      }
+    }
+
+    &:hover .area-navs {
+      opacity: 1;
+    }
+  }
+}
+
+.slice {
+  @include mp-width();
+}
+
+.slice-photo-content {
+  float: left;
+  width: 100%;
+  height: auto;
+  @include centralizar;
+  overflow: hidden;
+
+  img {
+    width: auto;
+    height: auto;
+    max-height: 100%;
+    @include mp-br(3px, 3px, 3px, 3px);
+  }
+}
+
+#large-house-sld-arrows {
+  width: 100%;
+  float: left;
+  height: 480px;
+  position: relative;
+  z-index: 200;
+  margin-top: -480px;
+}
+
+#large-house-sld-arrows div {
+  width: 100%;
+  float: left;
+}
+
+#thumbs a.ativo img {
+  border-color: $color-second-default;
+}
+
+.house-itens-all-detail-info {
+  width: 100%;
+  float: left;
+  margin: 20px 0 0 0;
+}
+
+.house-itens-all-detail-info h2 {
+  width: 100%;
+  float: left;
+  font-size: 16px;
+  font-weight: 700;
+  color: #111;
+  margin: 0px 0px 10px 0;
+  padding: 0px;
+}
+
+.house-itens-all-detail {
+  width: 100%;
+  float: left;
+  margin: 0;
+}
+
+.house-itens-all-detail div {
+  width: -webkit-calc(50% - 1px);
+  width: -moz-calc(50% - 1px);
+  width: calc(50% - 1px);
+  float: left;
+  height: 40px;
+  line-height: 40px;
+  margin-bottom: 2px;
+}
+
+.house-itens-all-detail div:nth-child(even) {
+  float: right;
+}
+
+.house-itens-all-detail div span {
+  float: left;
+  text-align: right;
+  height: 40px;
+  line-height: 40px;
+  padding-right: 10px;
+  width: -webkit-calc(100% - 41px);
+  width: -moz-calc(100% - 41px);
+  width: calc(100% - 41px);
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 5px 0 0 5px;
+}
+
+.house-itens-all-detail div small {
+  float: right;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  font-weight: 700;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.04);
+  border-radius: 0 5px 5px 0px;
+  color: #96B843;
+}
+
+.left-slider {
+  width: 766px;
+  float: left;
+}
+
+.area-carousel {
+  width: 340px;
+  float: left;
+}
+
+.slideshow li {
+  width: 100%;
+  float: left;
+}
+
+.area-carousel .slideshow {
+  width: calc(100% + 10px);
+  float: right;
+}
+
+.slideshow li a {
+  width: calc((100% / 5) - 10px);
+  height: auto;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  border-radius: 3px;
+  float: left;
+  margin: 0 0 0 10px;
+  position: relative;
+}
+
+.area-carousel .slideshow li a img {
+  @include mp-br(2px, 2px, 2px, 2px);
+  border: 2px solid #fff;
+}
+
+.area-thumb {
+  width: 100%;
+  float: left;
+  @include centralizar;
+  position: relative;
+  margin: 20px 0 0 0;
+}
+
+.area-navs-carousel {
+  width: 100%;
+  height: 0;
+  float: left;
+  @include absolute-center;
+  padding: 0 20px;
+  margin: -5px 0 0 0;
+
+  #prevthumb {
+    width: 9px;
+    height: 16px;
+    float: left;
+    background: url("../imgs/prevprodutos.png") center no-repeat;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  #nextthumb {
+    width: 9px;
+    height: 16px;
+    float: right;
+    background: url("../imgs/nextprodutos.png") center no-repeat;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+

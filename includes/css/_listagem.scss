@@ -1,0 +1,200 @@
+@import "settings";
+@import "../../core/scss/mixins";
+
+#_listagem-page {
+  padding: 20px 0;
+
+  .left {
+    @include mp-width(275px, $m: 0 20px 0 0);
+    border: 2px solid #EEEEEE;
+    @include mp-br(2px, 2px, 2px, 2px);
+
+    .area-menu {
+      @include mp-width();
+      padding: 20px;
+      border-bottom: 2px solid $color-second-default;
+
+      &:last-child {
+        border-bottom: 0;
+      }
+
+      h1 {
+        @include mp-width();
+        font-size: 20px;
+        color: $color-default;
+        @include mp-sombra();
+        font-weight: 500;
+      }
+
+      ul {
+        @include mp-width($m: 15px 0 0 0);
+
+        li {
+          @include mp-width($m: 0 0 7px 0);
+
+          a {
+            @include mp-width();
+            font-size: 16px;
+            color: #444444;
+            @include mp-sombra();
+            padding-right: 20px;
+            background: url("../imgs/seta-menu.png") center right no-repeat;
+
+            &:hover, &.ativo {
+              color: $color-default;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .right {
+    @include mp-calc(width, '100% - 295px');
+    float: left;
+
+    .filtro {
+      @include mp-width(100%, 70px);
+      border: 2px solid #EEEEEE;
+      @include mp-br(2px, 2px, 2px, 2px);
+      @include centralizar;
+      padding: 0 20px;
+
+      .filtro-int {
+        @include mp-width();
+
+        .breadcrumb {
+          @include mp-width(auto, 40px);
+          font-size: 16px;
+          color: #858585;
+          @include mp-sombra();
+          @include centralizar;
+
+          span {
+            color: $color-default;
+            text-decoration: underline;
+          }
+        }
+
+        .select {
+          @include mp-width(260px, $f: right);
+
+          @include mp-form-select(
+                          40px,
+                          seta-form,
+                          true,
+                          3px,
+                          2px,
+                          $color-second-default,
+                          $color-second-default,
+                          14px,
+                          #444444,
+                          400,
+                          true,
+                          0 20px
+          );
+        }
+      }
+    }
+
+    .area-produtos {
+      @include mp-calc(width, '100% + 20px');
+      float: right;
+      margin: 20px 0 0 0;
+
+
+      a {
+        @include mp-calc(width, '100% / 3 - 20px');
+        float: left;
+        margin: 0 0 0 20px;
+
+        .foto {
+          @include mp-width();
+
+          img {
+            @include mp-width();
+            @include mp-animacao();
+          }
+        }
+
+        .tit-categorias {
+          @include mp-width($m: 20px 0 5px 0);
+          text-align: center;
+          font-size: 12px;
+          color: #888888;
+          @include mp-sombra();
+        }
+
+        .tit-produtos {
+          @include mp-width();
+          position: relative;
+          font-size: 16px;
+          font-weight: 500;
+          color: #444444;
+          @include mp-sombra();
+          @include mp-truncate(270px);
+          @include mp-animacao();
+          .mask-tit {
+            @include mp-width(100px, 30px);
+            background: url("../imgs/mask-tit.png") center no-repeat;
+            position: absolute;
+            right: 0;
+          }
+        }
+
+        .preco {
+          @include mp-width($m: 15px 0 0 0);
+          text-align: center;
+          font-size: 20px;
+          font-weight: 500;
+          @include mp-sombra();
+          color: #2A2A7F;
+        }
+
+        &:hover .foto img {
+          @include mp-scale(1.02);
+        }
+
+        &:hover .tit-produtos {
+          color: $color-default;
+          @include mp-sem-sombra;
+        }
+
+      }
+
+      .a {
+        @include mp-width($m: 20px 0);
+      }
+
+      .b {
+        @include mp-width($m: 20px 0);
+        display: none;
+      }
+    }
+
+    .btn-carregar {
+      @include mp-width(100%, 50px, 70px 0 0 0);
+      background: $color-default;
+      @include centralizar;
+      font-size: 18px;
+      color: #fff;
+      font-weight: 500;
+      @include mp-br(2px, 2px, 2px, 2px);
+
+
+      .load {
+        @include mp-width(20px, 20px, $m: 0 0 0 15px);
+        background: url("../imgs/load.png") center no-repeat;
+
+        -webkit-animation: rodaroda 1s linear alternate 3;
+        -moz-animation: rodaroda 0.8s linear infinite;
+        -o-animation: rodaroda 0.8s linear infinite;
+        animation: rodaroda 0.8s linear infinite;
+      }
+
+    }
+  }
+}
+
+
+

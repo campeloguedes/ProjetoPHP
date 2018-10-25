@@ -1,0 +1,170 @@
+/* tables */
+table.table {
+	font-family:arial;
+	background-color: #DDD;
+	margin:10px 0pt 15px;
+	font-size: 8pt;
+	width: 98%;
+	text-align: left;
+	float:left;
+}
+
+
+table.table thead.bar tr{
+	background:#CCC;
+	height:40px;
+		
+}
+
+table.table thead tr th.order, table.table thead tr th#selrev{cursor:pointer;}
+table.table thead tr th.order:hover{text-decoration: underline;}
+
+
+table.table thead tr th, table.table tfoot tr th {
+	background-color: #E6E6E6;
+	font-size: 8pt;
+	padding: 10px;
+	text-align: center;
+	color:#000;
+	text-transform: capitalize;
+	font-size: 12px;
+	
+	
+}
+
+table tfoot tr th{
+	background-color: #E6E6E6;
+}
+
+
+
+table.table thead tr .header {
+	background-image: url(blue/bg.gif);
+	background-repeat: no-repeat;
+	background-position: center right;
+	cursor: pointer;
+}
+table.table tbody td {
+	color: #3D3D3D;
+	padding: 10px;
+
+	vertical-align: top;
+	text-align: center;
+	font-size:11px;
+}
+
+table.table tbody tr{
+	background-color: #FFFFFF; 	
+}
+
+table.table tbody tr.odd{
+	background-color:#F8F8F8;
+}
+
+table.table tbody tr.over{
+	background-color: #FFFDB2;	
+}	
+
+table.table thead tr .headerSortUp {
+	background-image: url(blue/asc.gif);
+}
+table.table thead tr .headerSortDown {
+	background-image: url(blue/desc.gif);
+}
+table.table thead tr .headerSortDown, table.table thead tr .headerSortUp {
+background-color: #AAA;
+}
+
+
+
+
+.dataTables_wrapper {
+	float:left;
+	width:100%;
+
+}
+
+.dataTables_length {
+	width: 30%;
+	float: left;
+	font-size: 12px;
+}
+
+
+
+.dataTables_filter {
+	width: 40%;
+	float: right;
+	text-align: right;
+	font-size: 12px;
+	
+}
+
+.dataTables_info {
+	width: 50%;
+	float: left;
+	font-size: 12px;
+}
+
+.dataTables_paginate {
+	width: 44px;
+	* width: 50px;
+	float: right;
+	text-align: right;
+	font-size: 12px;
+}
+
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * DataTables sorting
+ */
+
+.sorting_asc {
+	background: url('../images/sort_asc.jpg') no-repeat center right;
+}
+
+.sorting_desc {
+	background: url('../images/sort_desc.jpg') no-repeat center right;
+}
+
+.sorting {
+	background: url('../images/sort_both.jpg') no-repeat center right;
+}
+
+.sorting_asc_disabled {
+	background: url('../images/sort_asc_disabled.jpg') no-repeat center right;
+}
+
+.sorting_desc_disabled {
+	background: url('../images/sort_desc_disabled.jpg') no-repeat center right;
+}
+
+/* Pagination nested */
+.paginate_disabled_previous, .paginate_enabled_previous, .paginate_disabled_next, .paginate_enabled_next {
+	height: 19px;
+	width: 19px;
+	margin-left: 3px;
+	float: left;
+}
+
+.paginate_disabled_previous {
+	background-image: url('../images/back_disabled.jpg');
+}
+
+.paginate_enabled_previous {
+	background-image: url('../images/back_enabled.jpg');
+}
+
+.paginate_disabled_next {
+	background-image: url('../images/forward_disabled.jpg');
+}
+
+.paginate_enabled_next {
+	background-image: url('../images/forward_enabled.jpg');
+}
+
+td a img{
+	border:none;
+}

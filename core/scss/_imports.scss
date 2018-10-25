@@ -1,0 +1,14 @@
+@import "reset";
+@import '../../includes/css/_settings';
+@import '../../bower_components/foundation-sites/scss/foundation';
+@import '../../bower_components/motion-ui/src/motion-ui';
+//componentes
+@import 'implements';
+@import 'mixins';
+@import 'init';
+@import "layout";
+@import "swiper";
+@import "hover";
+@import "animate";
+@import "lightbox";
+@import "form-select";

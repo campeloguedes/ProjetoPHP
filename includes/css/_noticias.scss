@@ -1,0 +1,44 @@
+@import "settings";
+@import "../../core/scss/mixins";
+
+#_noticias-page {
+
+  .area-noticias {
+    @include mp-width($m: 40px 0 0 0);
+
+    a {
+      @include mp-width();
+      padding-bottom: 40px;
+      border-bottom: 1px solid #EBEBF3;
+      padding-top: 40px;
+
+      &:first-child{
+        padding-top: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+        border-bottom: 0;
+      }
+
+      h1 {
+        @include mp-width();
+        font-size: 12px;
+        color: #111111;
+        @include mp-sombra();
+        @include mp-animacao();
+      }
+
+      h2 {
+        @include mp-width($m: 8px 0 0 0);
+        font-size: 20px;
+        color: #111111;
+        @include mp-sombra();
+      }
+
+      &:hover h2 {
+        color: $color-default;
+      }
+    }
+  }
+}

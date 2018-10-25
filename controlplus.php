@@ -1,0 +1,1 @@
+<?php header('location: http://cms.mediaplus.com.br/projetos/feitonotocantins/controlplus'); ?>

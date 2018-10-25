@@ -1,0 +1,125 @@
+@import "settings";
+@import "../../core/scss/mixins";
+
+#_noticia-page {
+
+  .area-noticia {
+    @include mp-width();
+
+    h1 {
+      @include mp-width(840px, auto, $c: true);
+      font-size: 42px;
+      color: #111111;
+      @include mp-sombra();
+      font-weight: 700;
+      text-align: center;
+      line-height: 42px;
+
+    }
+
+    .area-social {
+      @include mp-width(100%, 1px, 60px 0 0 0);
+      background: #EBEBF3;
+      position: relative;
+
+      .social {
+        @include mp-width(auto);
+        @include absolute-center;
+        background: #fff;
+        padding: 0 30px;
+        @include centralizar;
+
+        //@TODO: each social
+        $social: facebook twitter;
+        @each $socialnetwork in $social {
+          .#{$socialnetwork} {
+            @include mp-width(32px, 32px, 0 5px 0 0);
+            background: url("../imgs/#{$socialnetwork}-cc.png") center no-repeat;
+            &:hover {
+              opacity: 0.7;
+            }
+          }
+        }
+        .twitter {
+          margin: 0;
+        }
+
+      }
+    }
+    .data {
+      @include mp-width($m: 40px 0 0 0);
+      text-align: center;
+      color: #A5A5A5;
+      font-size: 16px;
+    }
+
+    p {
+      @include mp-width(800px, auto, $c: true);
+      font-size: 16px;
+      color: #111111;
+      @include mp-sombra();
+      line-height: 24px;
+      padding-top: 40px;
+    }
+
+  }
+
+  .divider-noticia {
+    @include mp-width(100%, 1px, 40px 0);
+    background: #EBEBF3;
+  }
+
+
+  .leia-mais{
+    @include mp-width();
+
+
+    .tit{
+      @include mp-width($m: 0 0 40px 0);
+      font-size:32px;
+      color: $color-default;
+      font-weight: 500;
+      @include mp-sombra();
+    }
+
+
+    .area-noticias {
+      @include mp-width();
+
+      a {
+        @include mp-width();
+        padding-bottom: 40px;
+        border-bottom: 1px solid #EBEBF3;
+        padding-top: 40px;
+
+        &:first-child{
+          padding-top: 0;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+          border-bottom: 0;
+        }
+
+        h1 {
+          @include mp-width();
+          font-size: 12px;
+          color: #111111;
+          @include mp-sombra();
+          @include mp-animacao();
+        }
+
+        h2 {
+          @include mp-width($m: 8px 0 0 0);
+          font-size: 20px;
+          color: #111111;
+          @include mp-sombra();
+        }
+
+        &:hover h2 {
+          color: $color-default;
+        }
+      }
+    }
+  }
+}

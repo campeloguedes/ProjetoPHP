@@ -1,0 +1,130 @@
+/*
+fallback for other projects mp
+*/
+@charset "iso-8859-1";
+
+html[mp-app], 
+html[mp-app] body { 
+width:100%;
+height:auto;
+float:left;
+padding:0px;
+margin:0px;
+height:auto;
+overflow-x:hidden;
+}
+
+*[mp-app] *  {
+transition:all 0.3s ease-in;
+-webkit-transition:all 0.3s ease;
+-moz-transition:all 0.3s ease;
+-ms-transition:all 0.3s ease;
+}
+
+*[mp-app] * { 
+cursor: default; 
+outline: none;
+resize:none;
+text-decoration: none;
+padding: 0px;
+margin: 0px;
+}
+
+*[mp-app] *  , *[mp-app] *:before, *[mp-app] *:after {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+
+*[mp-app]  a, 
+*[mp-app] a * , 
+*[mp-app] input[type="submit"] { cursor: pointer !important; }
+
+div[mp-mobilemenu] { display: none; overflow: hidden; }
+
+
+*[mp-ct] {
+width:100%;
+padding-left:50%;
+float:left;
+}
+
+*[mp-clear] {
+width: 100%;
+float: left;
+clear: both;
+}
+
+*[mp-cti] {
+width:1160px;
+margin-left: -580px;
+float:left;
+clear: both;
+}
+
+*[mp-acti] {
+float: left;
+-webkit-transform:translateX(-50%);
+-moz-transform:translateX(-50%);
+-ms-transform:translateX(-50%);
+-o-transform:translateX(-50%);
+transform:translateX(-50%);
+}
+
+*[mp-avh]{
+display: -webkit-flex;
+display: flex;
+-webkit-align-items: center;
+align-items: center;
+-webkit-justify-content: center;
+justify-content: center;
+}
+
+*[mp-app] .cycle-slide , 
+*[mp-app] header, 
+*[mp-app]  svg *, 
+*[mp-app]  map , 
+*[mp-app]  map * , 
+*[mp-app]  *[mp-notransition] , 
+*[mp-app]  *[mp-notransition] * {
+-webkit-transition: none !important;
+-moz-transition:none !important;
+-ms-transition:none !important;
+-o-transition:none !important;
+transition: none !important;
+}
+
+
+*[mp-full] {
+float: left !important;
+width: 100% !important;
+height: auto;
+}
+
+*[mp-app]  a {
+color: inherit;
+}
+
+ *[mp-nolink] , *[mp-nolink] * {
+cursor: default !important;
+}
+
+ *[mp-link] , *[mp-link] * {
+cursor: pointer !important;
+}
+
+*[mp-load] {
+width:100%;
+height:100%;
+position:fixed;
+left:0px;
+top:0px;
+z-index:21500;
+background:url(../imgs/mp-load.gif) no-repeat center center #000;
+opacity:0.6;
+}
+
+*[mp-hide], *[mp-hide] * {
+display: none;
+} 

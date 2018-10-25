@@ -1,0 +1,24 @@
+{
+  "name": "projetomp",
+  "version": "1.0.0",
+  "authors": [
+    "Media Plus"
+  ],
+  "description": "",
+  "main": "home.php",
+  "license": "",
+  "homepage": "http://mediaplus.com.br",
+  "dependencies": {
+    "foundation-sites": "~6.3.0",
+    "motion-ui": "~1.2.2",
+    "neutroncss": "*"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "private": true
+}

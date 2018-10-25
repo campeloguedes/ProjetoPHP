@@ -1,0 +1,193 @@
+@import "settings";
+@import "../../core/scss/mixins";
+
+#_anuncie-page {
+
+  .area-anuncie {
+    @include mp-width();
+
+    .area-anuncie-int {
+      @include mp-width(820px, auto, $c: true);
+
+      .left {
+        @include mp-calc(width, '100% - 420px');
+        float: left;
+        margin: 0 20px 0 0;
+
+        .cmp {
+          @include mp-width($m: 0 0 10px 0);
+          position: relative;
+
+          input[type="text"],
+          input[type="email"],
+          textarea {
+            @include mp-width(100%, 50px);
+            border: 2px solid #EEEEEE;
+            box-shadow: none !important;
+            padding: 0 20px;
+            font-size: 16px;
+            color: #111111;
+            @include mp-sombra();
+            @include mp-placeholder() {
+              opacity: 1;
+              font-size: 16px;
+              color: #111111;
+              @include mp-sombra();
+            }
+          }
+
+          textarea {
+            padding: 20px;
+            height: 120px;
+          }
+
+          input[type="radio"],
+          input[type="checkbox"] {
+            margin: 0;
+          }
+
+          span {
+            @include mp-width(auto, $m: 0 20px 0 5px);
+            font-size: 16px;
+            color: #111111;
+            @include mp-sombra();
+          }
+
+          &.ck {
+            @include centralizar;
+            justify-content: flex-start;
+            padding: 15px 20px;
+          }
+
+          &.ckb{
+            display: block !important;
+          }
+
+          .uf {
+            @include mp-width(auto);
+            position: absolute;
+            top: 14px;
+            right: 20px;
+            font-size: 16px;
+            color: #111111;
+            @include mp-sombra();
+          }
+          .contador{
+             @include mp-width(auto, $f: right);
+            
+            .caracteres{
+              @include mp-width(auto, $m: 2px 0 0 0);
+            }
+          }
+          
+          .line{
+            @include mp-width();
+            @include centralizar;
+            justify-content: flex-start;
+
+            input{
+              float: left;
+            }
+          }
+          
+
+
+          .whats {
+            @include mp-width(auto, $f: right);
+            position: absolute;
+            @include centralizar;
+            right: 5px;
+            top: 10px;
+
+            span {
+              margin-left: 10px;
+              font-size: 12px;
+              color: #111111;
+              @include mp-sombra();
+              line-height: 15px;
+            }
+          }
+
+        }
+
+        .tit-cmp{
+          @include mp-width($m: 15px 0 0 0);
+          font-size: 16px;
+          padding: 0 20px;
+          line-height: 25px;
+          color: #111111;
+          @include mp-sombra();
+        }
+        
+        button{
+          @include mp-width(100%, 50px, 20px 0 0 0);
+          background:$color-second-default;
+          color: $color-default;
+          font-size: 20px;
+          @include mp-sombra();
+          font-weight: 500;
+          @include mp-br(3px, 3px, 3px, 3px);
+
+          &:hover{
+            background:$color-default;
+            color: #fff;
+          }
+        }
+        
+      }
+
+      .right {
+        @include mp-width(400px);
+
+        .area-infos{
+          @include mp-width();
+
+          .info-top{
+            @include mp-width();
+            background:#FFF8E8;
+            @include mp-br(2px, 2px, 2px, 2px);
+            padding: 30px;
+            
+            h1{
+              @include mp-width();
+              font-size: 20px;
+              color: #111111;
+              font-weight: 700;
+              @include mp-sombra();
+            }
+            
+            h2{
+              @include mp-width();
+              font-size: 16px;
+              color: #111111;
+              @include mp-sombra();
+            }
+          }
+
+          .info-txt{
+            @include mp-width($m: 20px 0 0 0);
+            background:#FFF8E8;
+            @include mp-br(2px, 2px, 2px, 2px);
+            padding: 30px;
+
+            h1{
+              @include mp-width();
+              font-size: 20px;
+              color:$color-default;
+              font-weight: 500;
+              @include mp-sombra();
+            }
+            
+            p{
+              @include mp-width($m: 7px 0 0 0);
+              font-size: 16px;
+              color:#111111;
+              @include mp-sombra();
+              line-height: 22px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

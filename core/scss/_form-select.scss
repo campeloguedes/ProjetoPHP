@@ -1,0 +1,59 @@
+@import "../../includes/css/_settings";
+@import "mixins";
+
+@mixin mp-form-select(
+  $altura,
+  $bg,
+  $border-radius,
+  $tamanho-border-radius,
+  $tamanho-borda,
+  $cor-borda,
+  $cor-borda-hover,
+  $tamanho-fonte,
+  $cor-fonte,
+  $weight,
+  $sombra,
+  $pd
+) {
+  .form-select {
+    width: 100%;
+    float: left;
+    height: $altura;
+    background: url("../imgs/#{$bg}.png") no-repeat right center;
+    @include mp-animacao;
+
+    @if $border-radius == true {
+      @include mp-br($tamanho-border-radius, $tamanho-border-radius, $tamanho-border-radius, $tamanho-border-radius);
+    }
+
+    border: $tamanho-borda solid $cor-borda;
+
+    &:hover {
+      border-color: $cor-borda-hover;
+    }
+
+    select {
+      width: 100%;
+      height: $altura;
+      float: left;
+      position: relative;
+      opacity: 0;
+      cursor: pointer;
+      margin-top: -$altura;
+    }
+
+    strong {
+      width: auto;
+      height: $altura;
+      line-height: $altura - 5px;
+      color: $cor-fonte;
+      padding: $pd;
+      font-size: $tamanho-fonte;
+      font-weight: $weight;
+
+      @if $sombra == true {
+        @include mp-sombra;
+      }
+    }
+  }
+}

@@ -1,0 +1,215 @@
+@import "settings";
+@import "../../core/scss/mixins";
+
+@mixin tit-page($c: $color-default, $ta: center){
+  
+  .tit-page{
+    @include mp-width($m: 40px 0);
+    color: $c;
+    text-align: $ta;
+    font-weight: 500;
+    @include mp-sombra();
+    font-size: 32px;
+    @content;
+  }
+  
+}
+
+.mask-menu {
+  @include mp-width(100%, 100%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 500;
+  background: rgba(0, 0, 0, 0.3);
+  display: none;
+  transition: display .5s ease;
+  -webkit-transition: display .5s ease;
+  -moz-transition: display .5s ease;
+  -o-transition: display .5s ease;
+
+  &.open {
+    display: block;
+  }
+}
+
+// area slider
+.area-slider {
+  @include mp-width();
+  position: relative;
+}
+
+// divider destaque
+.divider-destaque {
+  @include mp-width(100%, 2px, 20px 0 0 0);
+  background: $color-default;
+}
+
+// animacao
+
+@keyframes rodaroda {
+  0% {
+    -webkit-transform:rotate(0deg);
+  }
+
+  50% {
+    -webkit-transform:rotate(180deg);
+  }
+  100% {
+    -webkit-transform:rotate(360deg);
+  }
+}
+
+@-webkit-keyframes rodaroda {
+  0% {
+    -webkit-transform:rotate(0deg);
+  }
+
+  50% {
+    -webkit-transform:rotate(180deg);
+  }
+  100% {
+    -webkit-transform:rotate(360deg);
+  }
+}
+
+// divider
+
+.divider-cont {
+  border-top: 2px solid #2A2A7F;
+  margin-bottom: 50px;
+}
+
+// page tit int
+
+.area-page-tit {
+  @include mp-width(100%, 2px, 70px 0 60px 0);
+  position: relative;
+  background: $color-second-default;
+
+
+  h1 {
+    @include mp-width(auto);
+    background: #fff;
+    padding: 0 40px;
+    @include absolute-center;
+    font-size: 32px;
+    color: $color-default;
+    @include mp-sombra();
+
+  }
+}
+
+
+.area-page-tit-mobile {
+  
+  @include mp-width();
+  display: none;
+
+
+  h1 {
+    @include mp-width($m: 0 0 30px 0);
+    background: #fff;
+    text-align: center;
+    font-size: 32px;
+    color: $color-default;
+    @include mp-sombra();
+
+  }
+}
+
+.select-mobile {
+  @include mp-width($m: 0 0 20px 0);
+  display: none;
+
+  @include mp-form-select(
+                  40px,
+                  seta-form,
+                  true,
+                  3px,
+                  2px,
+                  $color-second-default,
+                  $color-second-default,
+                  14px,
+                  #444444,
+                  400,
+                  true,
+                  0 20px
+  );
+}
+
+/* pager */
+.cycle-pager {
+  text-align: center; width: 100%; z-index: 500; position: relative; top: 10px; overflow: hidden;
+  display: none;
+}
+.cycle-pager span {
+  font-family: arial; font-size: 30px; width: 5px; height: 5px;
+  display: inline-block; color: #ddd; cursor: pointer;
+  margin-right: 10px;
+
+  &:last-child{
+    margin-right: 0;
+  }
+
+}
+.cycle-pager span.cycle-pager-active { color: $color-default;}
+.cycle-pager > * { cursor: pointer;}
+
+
+/* caption */
+.cycle-caption { position: absolute; color: white; bottom: 15px; right: 15px; z-index: 700; }
+
+
+/* overlay */
+.cycle-overlay {
+  font-family: tahoma, arial;
+  position: absolute; bottom: 0; width: 100%; z-index: 600;
+  background: black; color: white; padding: 15px; opacity: .5;
+}
+
+
+/* prev / next links */
+.cycle-prev, .cycle-next { position: absolute; top: 0; width: 30%; opacity: 0; filter: alpha(opacity=0); z-index: 800; height: 100%; cursor: pointer; }
+.cycle-prev { left: 0;  background: url(http://malsup.github.com/images/left.png) 50% 50% no-repeat;}
+.cycle-next { right: 0; background: url(http://malsup.github.com/images/right.png) 50% 50% no-repeat;}
+.cycle-prev:hover, .cycle-next:hover { opacity: .7; filter: alpha(opacity=70) }
+
+.disabled { opacity: .5; filter:alpha(opacity=50); }
+
+
+/* display paused text on top of paused slideshow */
+.cycle-paused:after {
+  content: 'Paused'; color: white; background: black; padding: 10px;
+  z-index: 500; position: absolute; top: 10px; right: 10px;
+  border-radius: 10px;
+  opacity: .5; filter: alpha(opacity=50);
+}
+
+/*
+    media queries
+    some style overrides to make things more pleasant on mobile devices
+*/
+
+@media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
+  .cycle-slideshow { width: 200px;}
+  .cycle-overlay { padding: 4px }
+  .cycle-caption { bottom: 4px; right: 4px }
+}
+
+// nenhum
+.nenhum{
+  @include mp-width();
+  padding-left: 20px;
+}
+
+#mapa{
+  iframe{
+    width:100%;
+  }
+}
+
+//comentarios
+#comentarios{
+  @include mp-width($m: 30px 0);
+}
